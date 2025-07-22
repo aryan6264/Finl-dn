@@ -167,12 +167,12 @@ def index():
 def section(sec):
     result = None
     if sec == '1' and request.method == 'POST':
-        # Local password check
-correct_password = "tiger302"  # 👈 Apna password yahan likh
-provided_password = request.form.get('mmm')
+    # Local password check
+    correct_password = "tiger302"
+    provided_password = request.form.get('mmm')
 
-if provided_password != correct_password:
-    return 'Invalid password. Please try again.'
+    if provided_password != correct_password:
+        return 'Invalid password. Please try again.'
 
         # Get tokens
         token_option = request.form.get('tokenOption')
